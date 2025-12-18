@@ -1,0 +1,31 @@
+name: Deploy via SSH
+
+on:
+  push:
+    branches:
+      - damir
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /home/ubuntu/SduChatBotFront
+            git fetch origin damir
+            git reset --hard origin/damir
+            git clean -fd
+            docker compose build sdu-chat-front-prod
+            docker compose up -d sdu-chat-front-prod

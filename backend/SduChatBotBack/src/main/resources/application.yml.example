@@ -1,0 +1,43 @@
+GOOGLE_CLIENT_ID: {GOOGLE_CLIENT_ID}.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET: {GOOGLE_CLIENT_SECRET}
+# GOOGLE_REDIRECT_URI: http://localhost:5173/login-callback
+# GOOGLE_REDIRECT_URI: http://localhost/login-callback
+GOOGLE_REDIRECT_URI: http://chat.sdu.edu.kz/login-callback
+# GOOGLE_REDIRECT_URI: https://main.d36vvvf4ztyfx9.amplifyapp.com/login-callback
+
+SDU_AI_API_KEY: soon
+SDU_AI_API_URL: https://bvtoi4h2yxsm4irflom4r7qnru0krroe.lambda-url.eu-central-1.on.aws/
+
+SECURITY_KEY: k_app_123456
+TEST_USER: test_user@mail.ru
+TEST_USER_PASSWORD: test_user_121212
+
+spring:
+  datasource:
+    hikari:
+      auto-commit: false
+    url: jdbc:postgresql://${DATABASE_DOMAIN:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:sduchat}
+    username: ${DATABASE_USERNAME:k_app} #akhan
+    password: ${DATABASE_PASSWORD:123} #adilet-password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: update
+
+
+server:
+  servlet:
+    context-path: /api
+  address: 0.0.0.0
+
+application:
+  security:
+    jwt:
+      secret-key: ${JWT_SECRET_KEY:}
+      expiration: 31536000000  # 1 year
+#      expiration: 21600000 # 6 hours
+      #      expiration: 10000 # 10 seconds
+      refresh-token:
+#        expiration: 604800000 # 1 week
+        expiration: 31536000000  # 1 year

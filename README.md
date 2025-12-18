@@ -72,25 +72,68 @@ This is a serverless AWS Lambda function. For local development:
 - Deploy to AWS for production
 
 #### 3. On-Premise Qdrant RAG Service
+
+This is a full-featured Retrieval-Augmented Generation (RAG) system using Qdrant as the vector database and FastAPI for the API.
+
+**Prerequisites:**
+- Docker and Docker Compose
+- Python 3.11+ (for local development)
+
+**Setup:**
 ```bash
 cd on-premise/QdrantRagService
+mkdir -p data qdrant_storage
 docker-compose up -d
 ```
-Access at: http://localhost:8000
 
-#### 4. Telegram Bot UI
+**Access:**
+- RAG API: http://localhost:8000
+- Qdrant Web UI: http://localhost:6333/dashboard
+- API Documentation: http://localhost:8000/docs
+
+**Health Check:**
 ```bash
-cd TelegramBotUI
-pip install -r requirements.txt
-# Run the bot (specific commands in the service directory)
+curl http://localhost:8000/health
 ```
 
+#### 4. Telegram Bot UI
+
+**Build from source:**
+```bash
+cd on-premise/LocalChatBotService/tgbot
+docker build -t sdu-bot .
+```
+
+**Or use pre-built image:**
+```bash
+docker pull sultanmukashev/tg-bot:latest
+```
+
+**Run the container:**
+```bash
+docker run sultanmukashev/tg-bot:latest
+```
+
+**Interact with the bot:**
+Work with the bot in [Telegram](https://t.me/SDUGuideBot).
+
 #### 5. Chat Versioning App
+
+A React application with Tailwind CSS implementing tree-based chat versioning. Each user message can have multiple alternative versions (branches), creating a branched dialogue structure.
+
+**Features:**
+- Tree-structured dialogue
+- Message editing with automatic bot response updates
+- Version navigation
+- Synchronous navigation across all messages
+
+**Setup:**
 ```bash
 cd SDUBot-ChatVersioning
 npm install
 npm start
 ```
+
 Access at: http://localhost:3000
 
 #### 6. Local ChatBot Service
@@ -100,9 +143,36 @@ docker build -t sdu-bot .
 docker run sdu-bot
 ```
 
-## Instructions for Tests
+## API Usage
 
-No automated tests are currently implemented in the project. Manual testing can be performed by interacting with the deployed services or running the applications locally and verifying responses.
+The AWS ChatBot Service provides a REST API for interacting with the chatbot.
+
+### Endpoints
+
+- **POST /**: Ask a question to the SDU knowledge base
+  - Parameters: `question` (required), `user_id` (required), `language` (optional, default: en)
+- **GET /**: Ask a question via query parameters
+  - Parameters: `question` (required), `user_id` (optional, default: test_user), `language` (optional, default: en)
+
+### Example Requests
+
+**POST:**
+```json
+{
+  "question": "What are the admission requirements for SDU?",
+  "chat_id": "student123",
+  "isNeedTopic": true
+}
+```
+
+**GET:**
+```
+GET /?question=What are SDU office hours?&user_id=test_user&language=en
+```
+
+### CORS
+
+Enabled with allowed origins set to origin, methods: GET, POST, OPTIONS.
 
 ## Project Structure
 
@@ -139,6 +209,15 @@ SDUChatBot/
 - [Qdrant RAG Service README](on-premise/QdrantRagService/README.md)
 - [Chat Versioning App README](SDUBot-ChatVersioning/README.md)
 
----
+## Knowledge Base
 
-**Note:** Some information such as detailed system requirements, complete environment variable lists, and test instructions are not fully available in the current files. Please provide additional details for these sections if needed.
+The chatbot's knowledge base includes comprehensive information about SDU:
+- University policies and procedures
+- Student guides
+- Academic calendars
+- Admission requirements
+- Faculty information
+- Social media and contact details
+- LMS and learning resources
+
+Documents are available in multiple languages (English, Kazakh, Russian) and cover various aspects of university life.

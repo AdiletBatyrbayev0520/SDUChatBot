@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "APPLICATION_SECURITY_KEY",
+      "type": "java.lang.String",
+      "description": "Description for APPLICATION_SECURITY_KEY."
+    },
+    {
+      "name": "TEST_USER",
+      "type": "java.lang.String",
+      "description": "Description for TEST_USER."
+    },
+    {
+      "name": "TEST_USER_PASSWORD",
+      "type": "java.lang.String",
+      "description": "Description for TEST_USER_PASSWORD."
+    }
+  ] }

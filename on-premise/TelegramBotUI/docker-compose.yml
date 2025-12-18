@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  bot-postgres:
+    image: postgres:15
+    container_name: telegram_bot-postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: postgres
+    ports:
+      - "25901:5432"
+    restart: unless-stopped
+    volumes:
+      - ./db_queries/create:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - bot-network
+
+  bot-backend:
+    build: .
+    container_name: telegram_bot-backend
+    depends_on:
+      - bot-postgres
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - POSTGRES_URL=${POSTGRES_URL}
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    networks:
+      - bot-network
+      - llm_agent_llm_agent-network
+
+volumes:
+  postgres_data:
+
+networks:
+  bot-network:
+    driver: bridge
+  llm_agent_llm_agent-network:
+    external: true 

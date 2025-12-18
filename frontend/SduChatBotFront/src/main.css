@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+html, body {
+    @apply bg-gray-50;
+}
+
+@layer utilities {
+    .mini-scrollbar::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    .mini-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .mini-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(100, 100, 100, 0.4);
+        border-radius: 4px;
+    }
+
+    .mini-scrollbar {
+        scrollbar-width: thin; /* Firefox */
+        scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
+    }
+}

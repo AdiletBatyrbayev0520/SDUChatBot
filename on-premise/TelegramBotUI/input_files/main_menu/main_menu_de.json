@@ -1,0 +1,68 @@
+{
+    "text": "👋 Willkommen, SDU-Student! Brauchst du Hilfe?",
+    "button_text": "🏠 Hauptmenü",
+    "callback_data": "main_menu",
+    "children": [
+        {
+            "text": "🌐 Sprache auswählen",
+            "button_text": "🌐 Sprache",
+            "callback_data": "choose_language",
+            "children": [
+                {"text": "🇺🇸 Englisch ausgewählt", "button_text": "🇺🇸 Englisch", "callback_data": "lang_en"},
+                {"text": "🇷🇺 Russisch ausgewählt", "button_text": "🇷🇺 Russisch", "callback_data": "lang_ru"},
+                {"text": "🇰🇿 Kasachisch ausgewählt", "button_text": "🇰🇿 Kasachisch", "callback_data": "lang_kz"},
+                {"text": "🇹🇷 Türkisch ausgewählt", "button_text": "🇹🇷 Türkisch", "callback_data": "lang_tr"},
+                {"text": "🇩🇪 Deutsch ausgewählt", "button_text": "🇩🇪 Deutsch", "callback_data": "lang_de"}
+            ]
+        },
+        {
+            "text": "🎓 Studierenden-Servicezentrum",
+            "button_text": "🎓 Studierendenservice",
+            "callback_data": "info_menu",
+            "children": [
+                {
+                    "text": "**🆔 STUDENTENAUSWEIS**\n\nUm einen Studentenausweis zu erhalten, zahlen Sie **2000₸** über den angefügten Kaspi/Halyk QR-Code und füllen Sie dann das Google-Formular aus.",
+                    "button_text": "🆔 Studentenausweis",
+                    "callback_data": "info_1",
+                    "children": [
+                        {"text": "📋 Google-Formular für Studentenausweis", "button_text": "📋 Google-Formular", "url": "https://docs.google.com/forms/d/16Gx6EdDWwJXH_SmCKbCVnrj2n5eaf9T9B4CdsplNhfw/edit"},
+                        {"text": "💳 QR-Zahlungscodes", "button_text": "💳 QR-Zahlung", "callback_data": "payment", "img": ["images/sdupayment.jpg", "images/sdupayment2.jpg"]}
+                    ]
+                },
+                {
+                    "text": "**📄 Offizielle Dokumente erhalten**\n\nSie können offizielle Dokumente über MY.SDU.PORTAL online oder offline beantragen.\n\n1. Online-Dokument mit QR-Code und digitaler Signatur, verfügbar innerhalb von 3 Werktagen.\n2. Offline-Dokument über STUDENT AFFAIRS mit Unterschrift und Stempel vom Advising Desk.\n\nDokumenttypen:\n1. Beihilfe: (ЦОН) №4, №6.\n2. Militärregistrierung: №3.\n3. Schule, Arbeit: Universitätsbestätigung.\n4. Transkript.",
+                    "button_text": "📄 Dokumente erhalten",
+                    "callback_data": "info_2",
+                    "children": {"text": "🔍 Zugang zum oldmy.sdu Portal", "button_text": "🔍 oldmy.sdu", "url": "https://oldmy.sdu.edu.kz/"}
+                },
+                {
+                    "text": "**🏥 Medizinisches Attest**\n\nZum Einreichen eines medizinischen Attests füllen Sie das Google-Formular aus.\n\n**WICHTIG:** Antrag und Attest müssen innerhalb von 5 Werktagen nach Ausstellung eingereicht werden.",
+                    "button_text": "🏥 Medizinisches Attest",
+                    "callback_data": "info_3",
+                    "children": {"text": "📋 Google-Formular für medizinisches Attest", "button_text": "📋 Google-Formular", "url": "https://docs.google.com/forms/d/19qN_q9ZgkgE-Xm-13QxJgQp81PB7PAHVZoP9UZRKQ7g/edit"}
+                },
+                {
+                    "text": "**📄 Archivbescheinigung/Akademisches Transkript**\n\nLieber Absolvent, für Archivbescheinigungen oder akademische Transkripte senden Sie eine E-Mail an ssc@sdu.edu.kz mit Studienjahr/Abschlussjahr, ID und gewünschter Sprache. Die Bearbeitung dauert bis zu 3 Werktage.",
+                    "button_text": "📄 Archivbescheinigung",
+                    "callback_data": "info_4",
+                    "children": {"text": "📋 Google-Formular für Archivbescheinigung", "button_text": "📋 Google-Formular", "url": "https://docs.google.com/forms/d/1E7MU7LeDv2Xd6p-lSe7I_WLwCky5fiKPPJRIZZbZpOc/edit"}
+                },
+                {
+                    "text": "**🎓 Diplom-Wiederherstellung**\n\nLieber Absolvent, zur Wiederherstellung Ihres Diploms besuchen Sie EGOV.KZ und wählen Sie den Dienst „Bildung – Ausstellung von Duplikaten der Bildungsdokumente“. Das Diplom ist innerhalb von 15 Werktagen verfügbar.",
+                    "button_text": "🎓 Diplom-Wiederherstellung",
+                    "callback_data": "info_5",
+                    "children": {"text": "🔍 Zugang zu EGOV.KZ", "button_text": "🔍 egov", "url": "https://egov.kz/"}
+                },
+                {"text": "**💰 BUCHHALTUNG**\n\nZahlungen per:\n1) Kaspi/Halyk QR.\n2) Kaspi/Halyk Link.", "button_text": "💰 Buchhaltung", "callback_data": "info_6"},
+                {"text": "📋 Information über Prozessarten", "button_text": "📋 Prozessarten", "callback_data": "info_7"},
+                {"text": "💳 QR-Zahlungscodes", "button_text": "💳 QR-Zahlung", "callback_data": "payment", "img": ["images/sdupayment.jpg", "images/sdupayment2.jpg"]}
+            ]
+        },
+        {"text": "💻 IT-Support", "button_text": "💻 IT-Support", "callback_data": "it_support", "children": [
+            {"text": "🔧 WLAN-Passwort für Moodle-SDU ändern", "button_text": "🔧 WLAN-Passwort ändern", "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=4"},
+            {"text": "🔐 SDU E-Mail-Passwort ändern", "button_text": "🔐 E-Mail-Passwort ändern", "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=6"},
+            {"text": "📱 Gmail-App für SDU E-Mail auf Telefonen einrichten", "button_text": "📱 Gmail einrichten", "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=8"},
+            {"text": "⚙️ 'Senden rückgängig machen' in SDU E-Mail aktivieren", "button_text": "⚙️ Senden rückgängig machen", "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=11"}
+        ]}
+    ]
+}

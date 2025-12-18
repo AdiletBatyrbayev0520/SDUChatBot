@@ -1,0 +1,153 @@
+{
+    "text": "👋 Welcome, SDU student! Need help?",
+    "button_text": "🏠 Main Menu",
+    "callback_data": "main_menu",
+    "children": [
+        {
+            "text": "🌐 Choose language",
+            "button_text": "🌐 Language",
+            "callback_data": "choose_language",
+            "children": [
+                {
+                    "text": "🇺🇸 English selected",
+                    "button_text": "🇺🇸 English",
+                    "callback_data": "lang_en"
+                },
+                {
+                    "text": "🇷🇺 Выбран русский язык",
+                    "button_text": "🇷🇺 Russian",
+                    "callback_data": "lang_ru"
+                },
+                {
+                    "text": "🇰🇿 Қазақ тілі таңдалды",
+                    "button_text": "🇰🇿 Kazakh",
+                    "callback_data": "lang_kz"
+                },
+                {
+                    "text": "🇹🇷 Türkçe seçildi",
+                    "button_text": "🇹🇷 Turkish",
+                    "callback_data": "lang_tr"
+                },
+                {
+                    "text": "🇩🇪 Deutsch ausgewählt",
+                    "button_text": "🇩🇪 Deutsch",
+                    "callback_data": "lang_de"
+                }
+            ]
+        },
+        {
+            "text": "🎓 Students Service Center",
+            "button_text": "🎓 Student Services",
+            "callback_data": "info_menu",
+            "children": [
+                {
+                    "text": "**🆔 ID CARD**\n\nTo get an ID card, you need to pay **2000₸** through the attached Kaspi/Halyk QR.\n\nThen fill out your information through the google form.",
+                    "button_text": "🆔 Student ID",
+                    "callback_data": "info_1",
+                    "children": [
+                        {
+                            "text": "📋 Google form for ID Card",
+                            "button_text": "📋 Google form",
+                            "url": "https://docs.google.com/forms/d/16Gx6EdDWwJXH_SmCKbCVnrj2n5eaf9T9B4CdsplNhfw/edit"
+                        },
+                        {
+                            "text": "💳 Payment QR codes",
+                            "button_text": "💳 QR Payment",
+                            "callback_data": "payment",
+                            "img": [
+                                "images/sdupayment.jpg",
+                                "images/sdupayment2.jpg"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "**📄 Obtaining Official Documents/References**\n\nStudent can apply online or offline from their MY.SDU.PORTAL portal under the Online Services tab.\n\n1. Online reference with QR code and digital signature. If you applied for an online reference, you can download it from MY SDU PORTAL within 3 working days.\n2. Offline reference can be obtained by selecting STUDENT AFFAIRS with signature and seal from Advising Desk.\n\nTypes of references:\n1. Allowance: (ЦОН) №4, №6.\n2. Military registration: №3.\n3. School, work: University reference.\n4. Transcript.",
+                    "button_text": "📄 Obtain Official References",
+                    "callback_data": "info_2",
+                    "children": {
+                        "text": "🔍 Access to oldmy.sdu portal",
+                        "button_text": "🔍 oldmy.sdu",
+                        "url": "https://oldmy.sdu.edu.kz/"
+                    }
+                },
+                {
+                    "text": "**🏥 Medical Certificate**\n\nTo submit a medical certificate, you need to fill out the Google form in QR form.\n\n**IMPORTANT:** The application together with the certificate must be submitted within 5 working days from the date of issuance of the medical certificate.",
+                    "button_text": "🏥 Medical Certificate",
+                    "callback_data": "info_3",
+                    "children": {
+                        "text": "📋 Google form for Medical Certificate",
+                        "button_text": "📋 Google form",
+                        "url": "https://docs.google.com/forms/d/19qN_q9ZgkgE-Xm-13QxJgQp81PB7PAHVZoP9UZRKQ7g/edit"
+                    }
+                },
+                {
+                    "text": "**📄 Archival Reference/Academic Transcript**\n\nDear graduate, to get an archival reference/academic reference, write to ssc@sdu.edu.kz your year of study/graduation, ID document and the language in which you need the document. It will be ready within 3 working days after receiving the application.\n\n",
+                    "button_text": "📄 Archival Reference",
+                    "callback_data": "info_4",
+                    "children": {
+                        "text": "📋 Google form for Archival Reference",
+                        "button_text": "📋 Google form",
+                        "url": "https://docs.google.com/forms/d/1E7MU7LeDv2Xd6p-lSe7I_WLwCky5fiKPPJRIZZbZpOc/edit"
+                    }
+                },
+                {
+                    "text": "**🎓 Restore Diploma**\n\nDear graduate, to restore your diploma, go to EGOV.KZ.\n\nSubmit your application by clicking the \"ONLINE SERVICES IN ONE LIST-EDUCATION-ISSUANCE OF DUPLICATES OF EDUCATION DOCUMENTS\" button.\n\nAfter the application is accepted, the diploma will be ready within 15 working days.",
+                    "button_text": "🎓 Restore Diploma",
+                    "callback_data": "info_5",
+                    "children": {
+                        "text": "🔍 Access to EGOV.KZ",
+                        "button_text": "🔍 egov",
+                        "url": "https://egov.kz/"
+                    }
+                },
+                {
+                    "text": "**💰 ACCOUNTING**\n\nFor payment you can use:\n1) Kaspi/Halyk QR.\n2) Kaspi/Halyk link.",
+                    "button_text": "💰 Accounting",
+                    "callback_data": "info_6"
+                },
+                {
+                    "text": "📋 Information about process types",
+                    "button_text": "📋 Process Types",
+                    "callback_data": "info_7"
+                },
+                {
+                    "text": "💳 Payment QR codes",
+                    "button_text": "💳 QR Payment",
+                    "callback_data": "payment",
+                    "img": [
+                        "images/sdupayment.jpg",
+                        "images/sdupayment2.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "💻 IT Support",
+            "button_text": "💻 IT Support",
+            "callback_data": "it_support",
+            "children": [
+                {
+                    "text": "🔧 How to change Moodle-SDU wifi password",
+                    "button_text": "🔧 Change WiFi Password",
+                    "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=4"
+                },
+                {
+                    "text": "🔐 How to change SDU email password",
+                    "button_text": "🔐 Change Email Password",
+                    "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=6"
+                },
+                {
+                    "text": "📱 How to set up Gmail app to use SDU email on phones",
+                    "button_text": "📱 Set up Gmail",
+                    "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=8"
+                },
+                {
+                    "text": "⚙️ How to enable 'Undo Send' option in SDU email",
+                    "button_text": "⚙️ Enable Undo Send",
+                    "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=11"
+                }
+            ]
+        }
+    ]
+} 

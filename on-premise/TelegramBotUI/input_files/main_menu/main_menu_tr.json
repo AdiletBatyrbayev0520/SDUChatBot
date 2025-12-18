@@ -1,0 +1,153 @@
+{
+    "text": "👋 SDU öğrencisi, hoş geldiniz! Yardıma ihtiyacınız var mı?",
+    "button_text": "🏠 Ana Menü",
+    "callback_data": "main_menu",
+    "children": [
+        {
+            "text": "🌐 Dil seçin",
+            "button_text": "🌐 Dil",
+            "callback_data": "choose_language",
+            "children": [
+                {
+                    "text": "English language selected",
+                    "button_text": "🇺🇸 English",
+                    "callback_data": "lang_en"
+                },
+                {
+                    "text": "Выбран русский язык",
+                    "button_text": "🇷🇺 Russian",
+                    "callback_data": "lang_ru"
+                },
+                {
+                    "text": "Қазақ тілі таңдалды",
+                    "button_text": "🇰🇿 Kazakh",
+                    "callback_data": "lang_kz"
+                },
+                {
+                    "text": "Türkçe dil seçildi",
+                    "button_text": "🇹🇷 Turkish",
+                    "callback_data": "lang_tr"
+                },
+                {
+                    "text": "🇩🇪 Deutsch ausgewählt",
+                    "button_text": "🇩🇪 Deutsch",
+                    "callback_data": "lang_de"
+                }
+            ]
+        },
+        {
+            "text": "🎓 Öğrenci Hizmetleri Merkezi",
+            "button_text": "🎓 Öğrenci Hizmetleri",
+            "callback_data": "info_menu",
+            "children": [
+                {
+                    "text": "**🆔 ÖĞRENCİ KARTI**\n\nÖğrenci kartı almak için eklenen Kaspi/Halyk QR üzerinden **2000₸** ödeme yapmanız gerekmektedir.\n\nArdından google form üzerinden bilgilerinizi doldurun.",
+                    "button_text": "🆔 Öğrenci Kartı",
+                    "callback_data": "info_1",
+                    "children": [
+                        {
+                            "text": "📋 Öğrenci kartı için Google form",
+                            "button_text": "📋 Google form",
+                            "url": "https://docs.google.com/forms/d/16Gx6EdDWwJXH_SmCKbCVnrj2n5eaf9T9B4CdsplNhfw/edit"
+                        },
+                        {
+                            "text": "💳 Ödeme QR kodları",
+                            "button_text": "💳 QR Ödeme",
+                            "callback_data": "payment",
+                            "img": [
+                                "images/sdupayment.jpg",
+                                "images/sdupayment2.jpg"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "**📄 Referans Belgesi Alma**\n\nÖğrenci MY.SDU.PORTAL portalından Online Services menüsünde online veya offline başvuru yapabilir.\n\n1. QR kod ve dijital imzası olan online referans. Online referans için başvurduysanız, MY SDU PORTAL'dan 3 iş günü içinde indirebilirsiniz.\n2. Offline referansı Advising Desk'ten STUDENT AFFAIRS seçerek, imza ve mühür ile alabilirsiniz.\n\nReferans türleri:\n1. Burs: (ЦОН) №4, №6.\n2. Askerlik: №3.\n3. Okul, iş: Üniversite referansı.\n4. Transkript.",
+                    "button_text": "📄 Referans Belgesi Alma",
+                    "callback_data": "info_2",
+                    "children": {
+                        "text": "🔍 oldmy.sdu portalına giriş",
+                        "button_text": "🔍 oldmy.sdu",
+                        "url": "https://oldmy.sdu.edu.kz/"
+                    }
+                },
+                {
+                    "text": "**🏥 Sağlık Raporu**\n\nSağlık raporu teslim etmek için QR formdaki Google formu doldurmanız gerekmektedir.\n\n**ÖNEMLİ:** Başvuru raporla birlikte sağlık raporu çıkarıldığı tarihten itibaren 5 iş günü içinde teslim edilmelidir.",
+                    "button_text": "🏥 Sağlık Raporu",
+                    "callback_data": "info_3",
+                    "children": {
+                        "text": "📋 Sağlık raporu için Google form",
+                        "button_text": "📋 Google form",
+                        "url": "https://docs.google.com/forms/d/19qN_q9ZgkgE-Xm-13QxJgQp81PB7PAHVZoP9UZRKQ7g/edit"
+                    }
+                },
+                {
+                    "text": "**📄 Arşiv Belgesi/Akademik Transkript**\n\nDeğerli mezun, arşiv referansı/akademik referans almak için ssc@sdu.edu.kz adresine okuduğunuz/mezun olduğunuz yılı, kimlik kartınızı ve gerekli dili yazın. Başvuru kabul edildikten sonra 3 iş günü içinde hazır olacaktır.\n\n",
+                    "button_text": "📄 Arşiv Belgesi/Akademik Transkript",
+                    "callback_data": "info_4",
+                    "children": {
+                        "text": "📋 Arşiv Belgesi için Google form",
+                        "button_text": "📋 Google form",
+                        "url": "https://docs.google.com/forms/d/1E7MU7LeDv2Xd6p-lSe7I_WLwCky5fiKPPJRIZZbZpOc/edit"
+                    }
+                },
+                {
+                    "text": "**🎓 Diploma Kopyası Alımı**\n\nDeğerli mezun, diploma yenilemek için EGOV.KZ'ye gidin.\n\n\"EŞLEŞTİRİLMİŞ ÇEVRİMİÇİ HİZMETLER-EĞİTİM-EĞİTİM BELGELERİNİN DUBLİKALARINI ÇIKARMA\" butonuna tıklayarak başvurun.\n\nBaşvuru kabul edildikten sonra diploma 15 iş günü içinde hazır olacaktır.",
+                    "button_text": "🎓 Diploma Kopyası Alımı",
+                    "callback_data": "info_5",
+                    "children": {
+                        "text": "🔍 EGOV.KZ'ye giriş",
+                        "button_text": "🔍 egov",
+                        "url": "https://egov.kz/"
+                    }
+                },
+                {
+                    "text": "**💰 MUHASEBE**\n\nÖdeme için kullanılabilir:\n1) Kaspi/Halyk QR.\n2) Kaspi/Halyk bağlantısı.",
+                    "button_text": "💰 Muhasebe",
+                    "callback_data": "info_6"
+                },
+                {
+                    "text": "📋 Süreç türleri hakkında bilgi",
+                    "button_text": "📋 Süreç türleri",
+                    "callback_data": "info_7"
+                },
+                {
+                    "text": "💳 Ödeme QR kodları",
+                    "button_text": "💳 QR Ödeme",
+                    "callback_data": "payment",
+                    "img": [
+                        "images/sdupayment.jpg",
+                        "images/sdupayment2.jpg"
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "💻 IT Destek",
+            "button_text": "💻 IT Destek",
+            "callback_data": "it_support",
+            "children": [
+                {
+                    "text": "🔧 Moodle-SDU wifi şifresini nasıl değiştirebilirim",
+                    "button_text": "🔧 WiFi şifresini değiştir",
+                    "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=4"
+                },
+                {
+                    "text": "🔐 SDU email şifresini nasıl değiştirebilirim",
+                    "button_text": "🔐 Email şifresini değiştir",
+                    "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=6"
+                },
+                {
+                    "text": "📱 Telefonlarda SDU email kullanmak için Gmail uygulamasını nasıl kurabilirim",
+                    "button_text": "📱 Gmail kurulumu",
+                    "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=8"
+                },
+                {
+                    "text": "⚙️ SDU email'de 'Gönderimden vazgeç' seçeneğini nasıl ekleyebilirim",
+                    "button_text": "⚙️ Gönderimden vazgeçmeyi ekle",
+                    "url": "https://helpdesk.sdu.edu.kz/knowledgebase.php?article=11"
+                }
+            ]
+        }
+    ]
+}

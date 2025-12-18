@@ -1,0 +1,26 @@
+{
+    "text": "**Тілді таңдаңыз / Выберите язык / Choose language / Dil seçin**",
+    "callback_data": "choose_language",
+    "children": [
+        {
+            "text": "🇺🇸 English",
+            "callback_data": "lang_en"
+        },
+        {
+            "text": "🇷🇺 Русский",
+            "callback_data": "lang_ru"
+        },
+        {
+            "text": "🇰🇿 Қазақша",
+            "callback_data": "lang_kz"
+        },
+        {
+            "text": "🇹🇷 Türkçe",
+            "callback_data": "lang_tr"
+        },
+        {
+            "text": "🇩🇪 Deutsch",
+            "callback_data": "lang_de"
+        }
+    ]
+} 
