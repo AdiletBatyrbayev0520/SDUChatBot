@@ -1,0 +1,5 @@
+/telegram_bot/.env
+insert_datas_from_csv.ipynb
+generate_mock_datas.ipynb
+/.venv
+/.idea

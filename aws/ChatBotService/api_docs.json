@@ -1,0 +1,40 @@
+{
+    "message": "SDU University Chatbot API",
+    "version": "1.0",
+    "description": "AI Assistant for Suleyman Demirel University students and staff",
+    "endpoints": {
+        "POST /": {
+            "description": "Ask a question to the SDU knowledge base",
+            "parameters": {
+                "question": "The question to ask (required)",
+                "user_id": "Unique user identifier (required)",
+                "language": "Language code (optional, default: en)"
+            }
+        },
+        "GET /": {
+            "description": "Ask a question via query parameters (for testing)",
+            "parameters": {
+                "question": "The question to ask (required)",
+                "user_id": "Unique user identifier (optional, default: test_user)",
+                "language": "Language code (optional, default: en)"
+            }
+        }
+    },
+    "cors": {
+        "status": "enabled",
+        "allowed_origins": "origin",
+        "allowed_methods": ["GET", "POST", "OPTIONS"]
+    },
+    "example_post": {
+        "url": "POST /",
+        "body": {
+            "question": "What are the admission requirements for SDU?",
+            "chat_id": "student123",
+            "isNeedTopic": "true"
+        }
+    },
+    "example_get": {
+        "url": "/?question=What are SDU office hours?&user_id=test_user&language=en"
+    },
+    "knowledge_base": "Contains SDU policies, procedures, student guides, and university information"
+}

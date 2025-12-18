@@ -1,0 +1,8 @@
+asyncpg
+aiogram
+APScheduler
+python-decouple
+openai
+pandas
+tiktoken
+scipy

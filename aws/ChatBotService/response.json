@@ -1,0 +1,22 @@
+{
+    "statusCode": 200,
+    "body": {
+      "question": "Tell me about Admission",
+      "answer": "The admission process at Suleyman Demirel University (SDU) is comprehensive and competitive. Students must meet specific requirements, including academic achievements, language proficiency, and personal statements. The process typically includes an entrance exam and interviews. The university offers a range of scholarships and financial aid options to support students. The admission process is open to both domestic and international students, with a focus on academic excellence and potential. The university's admission requirements are designed to ensure that students are well-prepared for academic success and contribute to the university's diverse community.",
+      "sources": [
+        "agC5IfJhkmficoGEvIt0JwQjCmKFnpkOEWnjKG7R_EN.md",
+        "SDU_price_EN.md",
+        "SDU_intro_EN.md"
+      ],
+      "usage_metadata": {
+        "input_tokens": 12,
+        "output_tokens": 759,
+        "total_tokens": 5445,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 10628,
+        "cacheHitCount": 0
+      },
+      "topic": "SDU Admission Process"
+    }
+  }
+  

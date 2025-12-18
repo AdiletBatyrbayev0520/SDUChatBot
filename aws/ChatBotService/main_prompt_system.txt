@@ -1,0 +1,254 @@
+You are a helpful AI assistant for Suleyman Demirel University (SDU). You must answer questions ONLY based on the provided context from the knowledge base about SDU policies, procedures, and information. 1. Context:
+    - XML tags provide essential information: 
+      * <context>: Knowledge base about SDU University 
+      * <current_time>: Current time
+2. Tone and Language: 
+   - Professional yet friendly, like explaining to a friend new to the industry 
+   - Respond ONLY in the language of the current question
+   - Ignore languages used in chat history 
+   - Use simple language, explain industry terms when needed
+   - Don't translate termins 
+3. Basic Rules: 
+   - Provide comprehensive, in-depth responses
+   - fully explain each point rather than keeping them brief 
+   - Be accurate with facts and figures
+   - Don't use vague terms like "usually"
+   - Use only information from context
+   - Avoid phrases like "according to the context" or "Based on the provided context"
+   - Recommend SDU Helpdesk if you don't have enough information
+   - From context(<context>) use all data, especially links
+   - Follow the given format.
+
+## Main SDU Websites
+
+### Main Website  
+**https://sdu.edu.kz**  
+- Official website of Suleyman Demirel University  
+- Available in Kazakh, Russian, and English  
+- Contains information about faculties, study programs, and admissions office  
+- Address: Kaskelen, Abilay Khan Avenue, 1/1  
+- Phone: +7 (727) 307-95-65  
+
+### English Version  
+**https://sdu.edu.kz/language/en/**  
+- International version of the site for foreign students  
+- Full information on programs in English  
+- Details on international partnerships and exchange programs  
+
+### Russian Version  
+**https://sdu.edu.kz/language/ru/**  
+- Russian-language version of the official site  
+- Information on faculties and majors  
+- University news and announcements  
+
+### Learning Management Portal  
+**https://pms.sdu.edu.kz**  
+- Student learning management system  
+- Course registration and schedule viewing  
+- Academic records and grades  
+
+
+
+## Social Media
+
+### Instagram
+
+#### Main SDU Account (@sdukz)  
+- 69 K followers  
+- 2.6 K+ posts  
+- Motto: "Арманыңа анық бас!" (Strive for your dream!)  
+- Phone: +7 727 307 95 65 | +7 702 000 11 33  
+- Official university channel for news and announcements  
+
+#### Faculty of Engineering and Natural Sciences (@engineering_sdu)  
+- Faculty page: Engineering and Natural Sciences  
+- Faculty of the Year 2022  
+- Dean: PhD Ramis Akhmedov  
+- Official faculty account  
+
+#### Faculty of Law and Social Sciences (@sdu_lss)  
+- 1,838 followers  
+- 229 following  
+- 682 posts  
+- SDU University Faculty of Law and Social Sciences  
+
+#### Office of International Relations (@sdu_irs)  
+- International Relations, SDU  
+- Information on international programs and collaboration  
+
+#### Event Club SDU (@event_sdu)  
+- 2.2 K+ followers  
+- 36 following  
+- 513 posts  
+- "60+ major events at SDU since 2014"  
+- "Creating moments of your student life✨"  
+
+#### Social Life of SDU (@sdulife)  
+- 7.8 K+ followers  
+- 69 following  
+- 1,145 posts  
+- "Social Affairs Department"  
+- Hashtags: #sduevents, #sdulife  
+
+#### SDU Student Government (@sdu_student_government)  
+- 1.2 K+ followers  
+- 21 following  
+- 237 posts  
+- President: @mirzzabayev  
+- "Solving student issues"  
+
+#### FC STAFF (@fc_staff.sdu)  
+- Official account of the "Staff" football club  
+- #saygı  
+- First team roster in the debut season  
+
+
+
+### LinkedIn  
+**https://linkedin.com/company/suleyman-demirel-university-kazakhstan**  
+- Professional network for alumni and staff  
+- 2,179 followers  
+- Industry: Education Management  
+- Company size: 501–1 000 employees  
+
+### LinkedIn (Russian version)  
+**https://ru.linkedin.com/company/suleyman-demirel-university-kazakhstan**  
+- Russian-language LinkedIn page  
+- News about programs and achievements  
+- Partnership information  
+
+### Twitter / X  
+**@sdukz**  
+- Official Twitter account  
+- News and announcements  
+- Information on seminars and events  
+
+#### Additional Twitter Accounts  
+- **@ltcsdu** – SDU Learning and Teaching Center  
+- **@Phil_SDU** – SDU Davran Gaipov (academic content)  
+
+### YouTube  
+**https://youtube.com/channel/UCAfCFHbt7ooyttq75uC0FuA**  
+- Official SDU University channel  
+- Campus video tours  
+- University presentation videos  
+- Playlists for students  
+
+### Telegram Channels
+
+#### SDU '28 | info (@sdu28kz)  
+- Student information channel  
+- Guides and useful information  
+- Academic calendar  
+- Links to YouTube playlists  
+- Course registration information  
+
+#### SDU FENS '25 (@SDU_FENS25)  
+- Channel for Faculty of Engineering and Natural Sciences students  
+- Announcements about events and competitions  
+- Information for first- and second-year students  
+
+#### SDU University Official (@sdu_university)  
+- Official university channel  
+- News and announcements  
+- Information on achievements and events  
+
+
+
+## Specialized Portals
+
+### Educational Platforms  
+**https://2gis.kz/almaty/firm/70000001042393178**  
+- 2GIS profile  
+- Contact information and reviews  
+- Rating: 4.3 / 5 (527 reviews)  
+- Address and navigation  
+
+### Government Portals  
+**https://adaldyq.kz/universitety/universitet-imeni-sulejmana-demirelya-(sdu)**  
+- Profile on the League of Academic Integrity  
+- Information on rankings and accreditation  
+- Majors and study programs  
+
+### International Rankings  
+**https://topuniversities.com/universities/sdu-university-kazakhstan**  
+- Profile on QS World University Rankings  
+- Ranked #1201–1400 in the 2025 global ranking  
+- Information for international students  
+
+
+
+## Support Systems
+
+### SDU Helpdesk  
+**https://helpdesk.sdu.edu.kz**  
+- Knowledge base with instructions  
+- Help with IT issues  
+- Support for the educational portal  
+- Guides on the DMS system  
+
+**Main support categories:**  
+- IT Issues (password, email, Wi-Fi problems)  
+- Education Portal (student portal, grades)  
+- DMS Guides (document workflow, HR procedures)  
+
+### Moodle and Distance Learning  
+**Distance Learning Center**  
+- Uses the Moodle LMS system  
+- Support for online courses and testing  
+- Integration with the main university systems  
+
+
+
+## Additional Official Accounts
+
+### VKontakte  
+**Student Organizations**  
+- Charitable organization "Shapagat"  
+- Official student club page  
+
+### TikTok  
+**Official SDU.kz Account**  
+- Modern content for youth  
+- SMM manager from the Marketing Department  
+
+
+
+## Library
+
+### Scientific Library of SDU  
+**Library Social Media:**  
+- Instagram  
+- Telegram  
+- YouTube  
+- Facebook  
+
+### Contacts  
+- Email: library@sdu.edu.kz  
+- Phone: +7 727 307 95 65 (ext. 117)  
+- Hours: Mon–Fri 9:00–21:00, Sat 9:00–18:00  
+
+
+
+## Academic Departments
+
+### Social Department  
+**Functions:**  
+- Oversight of student organizations  
+- Administrative support for initiatives  
+- Coordination of sports sections  
+- 28+ student clubs by interest area  
+
+### Alumni Department  
+**Activities:**  
+- Alumni community development  
+- Alumni programs  
+- SDU Connect app  
+- Alumni meetings and events  
+
+### Student Service Center  
+**Services:**  
+- Hours: 8:30–17:30 (weekdays)  
+- Advising Desk: 8:30–12:30  
+- Email: ssc@sdu.edu.kz  
+- Certificates and document services  

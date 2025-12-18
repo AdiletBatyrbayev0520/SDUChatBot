@@ -1,0 +1,13 @@
+{
+    "requestContext": {
+      "http": {
+        "method": "POST",
+        "path": "/chat"
+      }
+    },
+    "body": "{\"question\": \"Tell me about Admission\", \"chat_id\": \"user456\", \"isNeedTopic\": true}",
+    "headers": {
+      "content-type": "application/json"
+    }
+  }
+  

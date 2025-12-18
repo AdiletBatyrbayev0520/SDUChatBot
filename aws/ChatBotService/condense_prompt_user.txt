@@ -1,0 +1,11 @@
+<current_time>
+{{current_time}}
+</current_time>
+<chat_history>
+{{chat_history}}
+</chat_history>
+<question>
+{{question}}
+</question>
+
+Condensed Standalone Question:
