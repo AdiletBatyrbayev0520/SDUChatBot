@@ -49,6 +49,15 @@ The SDU AI Chatbot Platform provides:
 - Axios 1.10.0 - HTTP client
 - Docker & Nginx - Production deployment
 
+**iOS Mobile Application (SDUChatBot)**
+- Swift 5.9+ - Native iOS development
+- SwiftUI - Modern UI framework
+- MVVM Architecture - Clean code organization
+- Google OAuth 2.0 - Secure authentication
+- URLSession - Native HTTP client
+- Keychain - Secure token storage
+- iOS 15.0+ - Target platform
+
 **Chat Versioning Interface (SDUBot-ChatVersioning-Beta)**
 - React 18.2.0 - UI framework
 - Tailwind CSS 3.4.1 - Styling
@@ -108,9 +117,11 @@ The SDU AI Chatbot Platform provides:
 ## System Requirements
 
 ### Development Environment
-- **Node.js**: 18.x or higher (for frontend)
+- **Node.js**: 18.x or higher (for web frontend)
 - **Java**: JDK 21 (for backend)
 - **Python**: 3.8+ (AWS), 3.12+ (on-premise), 3.13+ (RAG service)
+- **Xcode**: 15.0+ with macOS 13.0+ (for iOS development)
+- **Swift**: 5.9+ (for iOS app)
 - **Docker**: Latest version with Docker Compose
 - **PostgreSQL**: 15+ (for backend and on-premise services)
 - **Git**: For version control
@@ -130,10 +141,11 @@ git clone <repository-url>
 cd sdu-chatbot-platform
 ```
 
-### 2. Frontend Setup (Web Application)
+### 2. Frontend Setup
 
+#### Web Application
 ```bash
-cd frontend/SduChatBotFront
+cd apps/web/SduChatBotFront
 
 # Install dependencies
 npm install
@@ -151,10 +163,26 @@ npm run dev
 docker-compose up
 ```
 
+#### iOS Mobile Application
+```bash
+cd apps/mobile/ios
+
+# Configure environment variables in Config/Dev.xcconfig:
+# BASE_URL = http://localhost:8080/api
+# OAUTH_START_URL = http://localhost:8080/api/auth/google/start
+# URL_SCHEME = sduchat
+
+# Open in Xcode
+open SDUChatBot.xcodeproj
+
+# Build and run (Cmd + R)
+# Requires iOS 15.0+ device or simulator
+```
+
 ### 3. Backend Setup (REST API)
 
 ```bash
-cd backend/SduChatBotBack
+cd apps/backend/SduChatBotBack
 
 # Set environment variables
 export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/sduchat
@@ -253,9 +281,18 @@ python main.py
 
 ## Environment Variables
 
-### Frontend (SduChatBotFront)
+### Web Frontend (SduChatBotFront)
 ```env
 VITE_API_URL=https://chat-back.sdu.edu.kz/api
+```
+
+### iOS Mobile App (SDUChatBot)
+```
+# Config/Dev.xcconfig or Config/Prod.xcconfig
+BASE_URL = https://chat.sdu.edu.kz/api
+OAUTH_START_URL = https://chat.sdu.edu.kz/api/auth/google/start
+URL_SCHEME = sduchat
+STATIC_BEARER = your_optional_static_bearer_token
 ```
 
 ### Backend (SduChatBotBack)
@@ -306,9 +343,9 @@ COLLECTION_NAME=documents
 
 ## Testing Instructions
 
-### Frontend Testing
+### Web Frontend Testing
 ```bash
-cd frontend/SduChatBotFront
+cd apps/web/SduChatBotFront
 
 # Manual testing checklist:
 # 1. Navigate to /login and complete authentication
@@ -320,9 +357,24 @@ cd frontend/SduChatBotFront
 npm run lint  # Code quality check
 ```
 
+### iOS Mobile App Testing
+```bash
+cd apps/mobile/ios
+
+# Manual testing checklist:
+# 1. Test Google OAuth login flow
+# 2. Send messages and verify responses
+# 3. Test on different iOS devices/simulators
+# 4. Verify source citations display
+# 5. Test keyboard interactions and scroll behavior
+
+# Build for testing
+xcodebuild -project SDUChatBot.xcodeproj -scheme SDUChatBot -destination 'platform=iOS Simulator,name=iPhone 15' build-for-testing
+```
+
 ### Backend Testing
 ```bash
-cd backend/SduChatBotBack
+cd apps/backend/SduChatBotBack
 
 # Run unit tests
 ./gradlew test
@@ -368,52 +420,72 @@ python src/test_client.py --interactive
 sdu-chatbot-platform/
 ├── README.md                           # This file - main project documentation
 ├── .gitignore                          # Git ignore rules
+├── API.md                              # API documentation
+├── Architecture.md                     # System architecture
+├── PRD.md                              # Product requirements document
+├── User_Stories.md                     # User stories and requirements
 │
-├── frontend/                           # Frontend applications
-│   ├── SduChatBotFront/               # Main web application
-│   │   ├── src/
-│   │   │   ├── components/            # React components
-│   │   │   │   ├── chat/             # Chat interface components
-│   │   │   │   └── chat-side-bar/    # Sidebar components
-│   │   │   ├── pages/                # Page components
-│   │   │   ├── route/                # Routing configuration
-│   │   │   ├── services/             # API services (RTK Query)
-│   │   │   ├── store/                # Redux store
-│   │   │   └── main.tsx              # Application entry point
-│   │   ├── public/                   # Static assets
-│   │   ├── Dockerfile                # Docker configuration
-│   │   ├── docker-compose.yml        # Docker Compose setup
-│   │   ├── nginx.conf                # Nginx configuration
-│   │   ├── package.json              # Dependencies
-│   │   ├── vite.config.ts            # Vite configuration
-│   │   └── README.md                 # Frontend documentation
+├── apps/                               # Application layer
+│   ├── web/                           # Web applications
+│   │   ├── SduChatBotFront/          # Main web application
+│   │   │   ├── src/
+│   │   │   │   ├── components/       # React components
+│   │   │   │   │   ├── chat/        # Chat interface components
+│   │   │   │   │   └── chat-side-bar/ # Sidebar components
+│   │   │   │   ├── pages/           # Page components
+│   │   │   │   ├── route/           # Routing configuration
+│   │   │   │   ├── services/        # API services (RTK Query)
+│   │   │   │   ├── store/           # Redux store
+│   │   │   │   └── main.tsx         # Application entry point
+│   │   │   ├── public/              # Static assets
+│   │   │   ├── Dockerfile           # Docker configuration
+│   │   │   ├── docker-compose.yml   # Docker Compose setup
+│   │   │   ├── nginx.conf           # Nginx configuration
+│   │   │   ├── package.json         # Dependencies
+│   │   │   ├── vite.config.ts       # Vite configuration
+│   │   │   └── README.md            # Frontend documentation
+│   │   │
+│   │   └── SDUBot-ChatVersioning-Beta/ # Chat versioning prototype
+│   │       ├── src/
+│   │       │   ├── components/      # React components
+│   │       │   │   └── Chat.js     # Tree-based chat component
+│   │       │   ├── App.js          # Main application
+│   │       │   └── index.js        # Entry point
+│   │       ├── package.json        # Dependencies
+│   │       └── README.md           # Versioning documentation
 │   │
-│   └── SDUBot-ChatVersioning-Beta/   # Chat versioning prototype
-│       ├── src/
-│       │   ├── components/           # React components
-│       │   │   └── Chat.js          # Tree-based chat component
-│       │   ├── App.js               # Main application
-│       │   └── index.js             # Entry point
-│       ├── package.json             # Dependencies
-│       └── README.md                # Versioning documentation
-│
-├── backend/                          # Backend services
-│   └── SduChatBotBack/              # Spring Boot REST API
-│       ├── src/main/java/kz/sdu/chat/mainservice/
-│       │   ├── config/              # Spring configurations
-│       │   ├── entities/            # JPA entities
-│       │   ├── repositories/        # Data repositories
-│       │   ├── services/            # Business logic
-│       │   ├── rest/
-│       │   │   ├── controllers/     # REST controllers
-│       │   │   └── dto/            # Data transfer objects
-│       │   ├── security/           # JWT security
-│       │   ├── feign/              # External API clients
-│       │   └── exceptions/         # Exception handling
-│       ├── Dockerfile              # Docker configuration
-│       ├── docker-compose.yml      # Docker Compose setup
-│       ├── build.gradle.kts        # Gradle build configuration
-│       └── README.md               # Backend documentation
+│   ├── mobile/                        # Mobile applications
+│   │   └── ios/                      # iOS native application
+│   │       ├── SDUChatBot/          # Main app source
+│   │       │   ├── App/            # Application entry point
+│   │       │   ├── Features/       # Feature modules (Auth, Chat)
+│   │       │   ├── Models/         # Data models and DTOs
+│   │       │   ├── Services/       # Business services (API, Storage)
+│   │       │   ├── Assets.xcassets/ # App assets and resources
+│   │       │   └── Info.plist      # App configuration
+│   │       ├── Config/             # Build configurations
+│   │       │   ├── Dev.xcconfig    # Development environment
+│   │       │   └── Prod.xcconfig   # Production environment
+│   │       ├── SDUChatBot.xcodeproj/ # Xcode project
+│   │       └── README.md           # iOS app documentation
+│   │
+│   └── backend/                       # Backend services
+│       └── SduChatBotBack/           # Spring Boot REST API
+│           ├── src/main/java/kz/sdu/chat/mainservice/
+│           │   ├── config/          # Spring configurations
+│           │   ├── entities/        # JPA entities
+│           │   ├── repositories/    # Data repositories
+│           │   ├── services/        # Business logic
+│           │   ├── rest/
+│           │   │   ├── controllers/ # REST controllers
+│           │   │   └── dto/        # Data transfer objects
+│           │   ├── security/       # JWT security
+│           │   ├── feign/          # External API clients
+│           │   └── exceptions/     # Exception handling
+│           ├── Dockerfile          # Docker configuration
+│           ├── docker-compose.yml  # Docker Compose setup
+│           ├── build.gradle.kts    # Gradle build configuration
+│           └── README.md           # Backend documentation
 │
 ├── aws/                             # AWS cloud services
 │   └── ChatBotService/             # Lambda-based chatbot
@@ -468,12 +540,14 @@ sdu-chatbot-platform/
 
 ### Folder Descriptions
 
-- **`frontend/`** - Web-based user interfaces built with React
-  - `SduChatBotFront/` - Production web application with authentication and chat features
-  - `SDUBot-ChatVersioning-Beta/` - Experimental tree-based conversation versioning interface
-
-- **`backend/`** - Server-side REST API services
-  - `SduChatBotBack/` - Spring Boot application handling authentication, chat management, and API integration
+- **`apps/`** - Application layer containing all user-facing applications
+  - **`web/`** - Web-based user interfaces built with React
+    - `SduChatBotFront/` - Production web application with authentication and chat features
+    - `SDUBot-ChatVersioning-Beta/` - Experimental tree-based conversation versioning interface
+  - **`mobile/`** - Mobile applications
+    - `ios/` - Native iOS application with SwiftUI and Google OAuth integration
+  - **`backend/`** - Server-side REST API services
+    - `SduChatBotBack/` - Spring Boot application handling authentication, chat management, and API integration
 
 - **`aws/`** - Cloud-based AI services
   - `ChatBotService/` - AWS Lambda function with Bedrock integration for AI responses
@@ -486,9 +560,10 @@ sdu-chatbot-platform/
 ## Links to Documentation
 
 ### Component Documentation
-- [Frontend Web App](frontend/SduChatBotFront/README.md) - React web application
-- [Chat Versioning](frontend/SDUBot-ChatVersioning-Beta/README.md) - Tree-based chat interface
-- [Backend API](backend/SduChatBotBack/README.md) - Spring Boot REST API
+- [Frontend Web App](apps/web/SduChatBotFront/README.md) - React web application
+- [iOS Mobile App](apps/mobile/ios/README.md) - Native iOS application
+- [Chat Versioning](apps/web/SDUBot-ChatVersioning-Beta/README.md) - Tree-based chat interface
+- [Backend API](apps/backend/SduChatBotBack/README.md) - Spring Boot REST API
 - [AWS Lambda Service](aws/ChatBotService/README.md) - Cloud AI chatbot
 - [Local AI Service](on-premise/LocalChatBotService/README.md) - On-premise chatbot
 - [RAG Service](on-premise/QdrantRagService/README.md) - Vector search service
@@ -508,7 +583,8 @@ sdu-chatbot-platform/
 ### Core Capabilities
 - ✅ Multilingual support (English, Kazakh, Russian, Turkish, German)
 - ✅ Multiple deployment options (cloud, on-premise, Telegram)
-- ✅ Secure authentication with JWT and OAuth
+- ✅ Cross-platform access (Web, iOS, Telegram)
+- ✅ Secure authentication with JWT and Google OAuth
 - ✅ Conversation history and context management
 - ✅ Real-time chat interface
 - ✅ Document retrieval with semantic search
@@ -516,6 +592,7 @@ sdu-chatbot-platform/
 - ✅ Cost tracking and usage monitoring
 - ✅ Administrative tools and statistics
 - ✅ Responsive design for all devices
+- ✅ Native iOS app with SwiftUI
 
 ### Advanced Features
 - ✅ Tree-based conversation versioning
